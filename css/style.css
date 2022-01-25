@@ -1,0 +1,245 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section,a, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    background-color: #0E0718;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: #0E0718;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 6%;
+    align-items: center;
+    justify-items: center;
+}
+
+.navbar ul{
+    display: flex;
+    gap:1rem;
+}
+
+.navbar li{
+    padding: 0.7rem 0.7rem;
+    background-color: blueviolet;
+    border-radius: 10px;
+    
+}
+
+.navbar a{
+    padding: 0.7rem;
+    color: whitesmoke; 
+    cursor: pointer; 
+}
+
+.logo img{
+    width: 15rem;
+    cursor: pointer;
+}
+
+.center{
+    margin: 5% 6%;
+}
+
+.contanier_main{
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    margin-top: 7rem;
+}
+.titulo_e_texto_inicial {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.fotos_apresentacao {
+    max-width: 840px;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    
+
+}
+
+.fotos_apresentacao img{
+    max-width: 280px;
+    max-height: 280px;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+}
+
+.titulos{
+    color: blueviolet;
+    font-weight: bold;
+    font-size: 1.6rem;
+    
+}
+
+
+
+/* seção app */
+
+#app{
+    margin-top: 10rem;
+}
+
+.fotos_app img{
+    max-width: 320px;
+    max-height: 320px;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+   
+
+}
+
+.fotos_app {
+    margin-top: 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    justify-items: center;
+
+}
+.texto_app{
+    line-height: 3rem;
+}
+.paragrafos{
+    color: #B77AEF;
+    font-size: 1.2rem;
+}
+
+/* Seção motivação */
+
+#motivacao{
+    margin-top: 15rem;
+}
+
+.texto_motivacao{
+    align-items: center;
+    text-align: center;
+    color: #8a2be2;
+    
+}
+
+.texto_motivacao p{
+    line-height: 2rem;
+    margin-top: 2rem;
+}
+
+
+/* Seção Download */
+#download{
+    margin-top: 15rem;
+}
+.contanier_down{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+}
+
+.img_down img {
+    width: 300px;
+}
+
+.texto_download{
+    display: flex;
+    flex-direction: column;
+    gap:1.1rem;
+    width: 40%;
+}
+
+.texto_download a {
+    color: whitesmoke;
+    border: 2px solid blueviolet;
+    font-size: 1rem;
+    padding: 1rem;
+    width: 40%;
+    border-radius: 5px;
+    text-align: center;
+    
+}
+
+
+/* seção equipe */
+.contanier_equipe{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 17rem;
+    align-items: center;
+}
+.secao_equipe{
+    display: flex;
+    justify-content: space-between;
+    gap: 1.1rem;
+    
+}
+
+.img_cabecas_de_nos_tdos{
+    display: grid;
+    gap: 1rem;
+}
+
+
+.nomes_e_email{
+    display: grid;
+    justify-items: flex-start;
+    align-items: center;
+   
+}
+
+.paragrafos_equipe{
+    font-size: 1rem;
+    color: #8a2be2;
+}
+
+.nomes_e_email a{
+    color: #B77AEF;
+}
