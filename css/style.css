@@ -210,7 +210,7 @@ body{
 }
 
 .img_down img {
-    width: 300px;
+    width: 280px;
     transition: 1s;
     
 }
@@ -235,9 +235,13 @@ body{
 
 
 /* seção equipe */
+#equipe{
+    margin-bottom: 6rem;
+}
 .title_equipe{
     margin-top: 13rem;
     text-align: center;
+    
 
 }
 .title_equipe p{
@@ -404,18 +408,20 @@ body{
         display: grid;
         grid-template-columns: 1fr;
         gap: 6rem;
+        align-items: center;
+        justify-items: center;
         
     }
     .img_down{
         grid-column-start: 1;
         grid-row-start: 2;
-
     }
+
     .texto_download{
         width: 100%;
         align-items: center;
         gap: 2.3rem;
-        text-align: justify;
+        text-align: center;
     }
 
     .foto_junto_com_email{
@@ -458,15 +464,15 @@ body{
 }
 
 @media(max-width:529px){
-    .img_down{
-        text-align: center;
-    }
     .img_equipe{
         text-align: center;
     }
     .img_equipe img{
-        max-width: 70%;
+        max-width: 80%;
         text-align: center;
+    }
+    .img_down img{
+        width: 200px;
     }
 }
 
@@ -481,8 +487,7 @@ body{
     .fotos_app{
         grid-template-columns: 1fr;
     }
-    .img_cabecas_de_nos_tdos img {
-        min-width: 70%;
-        width: 100%;
+    .foto_junto_com_email img {
+        width: 70%;
     } 
 }
