@@ -255,17 +255,29 @@ body{
     gap: 1.1rem;
     
 }
-
+/*
 .img_cabecas_de_nos_tdos{
     display: grid;
     gap: 1rem;
 }
+*/
 
+.foto_junto_com_email{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.foto_junto_com_email img{
+    object-fit: cover;
+}
 
 .nomes_e_email{
     display: grid;
     justify-items: flex-start;
     align-items: center;
+    row-gap: 1.5rem;
    
 }
 
@@ -405,6 +417,22 @@ body{
         gap: 2.3rem;
         text-align: justify;
     }
+
+    .foto_junto_com_email{
+        display: grid;
+        text-align: center;
+        justify-items: center;
+        align-items: center;
+    }
+    .foto_junto_com_email img{
+        width: 80%;
+    }
+    .nomes_e_email{
+        text-align: center;
+        justify-items: center;
+        align-items: center;
+        row-gap: 5rem;
+    }
 }
 
 @media (max-width: 690px){
@@ -414,7 +442,7 @@ body{
         align-items: center;
         justify-items: center;
         gap: 3rem;
-        column-gap: 0;
+        column-gap: 1rem;
     }
     .fotos_apresentacao :last-child{
         grid-column-start: 1;
@@ -432,9 +460,6 @@ body{
 @media(max-width:529px){
     .img_down{
         text-align: center;
-    }
-    .img_down img{
-        max-width: 70%;  
     }
     .img_equipe{
         text-align: center;
@@ -458,6 +483,6 @@ body{
     }
     .img_cabecas_de_nos_tdos img {
         min-width: 70%;
-        max-width: 80%;
-    }
+        width: 100%;
+    } 
 }
