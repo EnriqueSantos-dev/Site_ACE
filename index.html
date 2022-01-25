@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/js/script.js">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
@@ -13,14 +14,19 @@
 <body>
     <header class="header">
         <div class="logo">
-            <a href="index.html"><img src="/imagens/logo_.svg" alt=""></a>
+            <a  href="index.html"><img id = "logo_principal" src="/imagens/logo_.svg" alt=""></a>
+            <a href="index.html"><img id="logo_media_query" src="/imagens/Vector_logo.svg" alt=""></a>
         </div>
         <nav class="navbar">
+            <button id="botao">
+                <span id = "hamburguer"></span> Menu
+                
+            </button>
             <ul>
-                <li><a class="active" href="#app">App</a></li>
-                <li><a class="active" href="#motivacao">Motivação</a></li>
-                <li><a class="active" href="#download">Download</a></li>
-                <li><a class="active" href="#equipe">Equipe</a></li>
+                <li ><a class="paragrafos" href="#app">App</a></li>
+                <li><a href="#motivacao">Motivação</a></li>
+                <li><a  href="#download">Download</a></li>
+                <li><a href="#equipe">Equipe</a></li>
             </ul>
         </nav>
     </header>
@@ -91,6 +97,10 @@
     <!-- Seção equipe -->
     <div id="equipe">
         <div class="center">
+            <div class="title_equipe">
+                <h1 class="titulos">Seção Equipe</h1>
+                <p class="paragrafos">Aqui voê nos conhece e tem acesso ao nosso email para eventuais dúvidas</p>
+            </div>
             <div class="contanier_equipe">
                 <div class="img_equipe">
                     <img  src="/imagens/img_equipe_.svg" alt="">
@@ -121,5 +131,6 @@
             </div>
         </div>
     </div>
+    <script src="/js/script.js"></script>
 </body>
 </html>

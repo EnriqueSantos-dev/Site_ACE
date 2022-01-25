@@ -52,7 +52,10 @@ html{
 body{
     background-color: #0E0718;
 }
-
+#botao{
+    display: none;
+    cursor: pointer;
+}
 .header{
     display: flex;
     justify-content: space-between;
@@ -60,7 +63,9 @@ body{
     align-items: center;
     justify-items: center;
 }
-
+#logo_media_query{
+    display: none;
+}
 .navbar ul{
     display: flex;
     gap:1rem;
@@ -79,7 +84,7 @@ body{
     cursor: pointer; 
 }
 
-.logo img{
+#logo_principal{
     width: 15rem;
     cursor: pointer;
 }
@@ -187,6 +192,8 @@ body{
 
 .img_down img {
     width: 300px;
+    transition: 1s;
+    
 }
 
 .texto_download{
@@ -209,10 +216,18 @@ body{
 
 
 /* seção equipe */
+.title_equipe{
+    margin-top: 13rem;
+    text-align: center;
+
+}
+.title_equipe p{
+    margin-top: 1rem;
+}
 .contanier_equipe{
     display: flex;
     justify-content: space-between;
-    margin-top: 17rem;
+    margin-top: 6rem;
     align-items: center;
 }
 .secao_equipe{
@@ -242,4 +257,188 @@ body{
 
 .nomes_e_email a{
     color: #B77AEF;
+}
+
+
+/* media */
+
+@media  (max-width: 863px){
+    #logo_principal{
+        display: none;
+    }
+    #logo_media_query{
+        cursor: pointer;
+        display: block;
+        width: 3.5rem;
+    }
+
+    .contanier_main{
+        display: grid;
+    }
+    .fotos_apresentacao{
+        justify-content: space-evenly;
+    }
+
+    .contanier_equipe{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+        gap: 4rem;
+        
+    }
+}
+
+@media (max-width: 720px){
+    #hamburguer{
+        width: 30px;
+        border-top: 2px solid;
+        color: #8a2be2;
+        
+    }
+
+    #hamburguer::after, #hamburguer::before{
+        content: '';
+        display: block;
+        width: 30px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+    .navbar.active #hamburguer{
+        border-top-color: transparent;
+
+    }
+    
+    .navbar.active #hamburguer::before{
+        transform: rotate(135deg);
+    }
+    .navbar.active #hamburguer::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+    #botao{
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1.3rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 1rem;
+        color: #8a2be2;
+        align-items: center;
+    }
+    
+    .navbar ul {
+        display: block; 
+        position: absolute;
+        width: 100%;
+        top: 80px;
+        right: 0px;
+        background: #0E0718;
+        height: 0px;
+        transition: .6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+       
+    }
+    .navbar li{
+        background: none;
+        text-align: center;
+        
+    }
+    .navbar  a{
+        
+        margin-top: 1rem;
+        color:#8a2be2;
+        border-bottom: 1px solid #B77AEF;
+        width: 100%;
+        display: block;
+        font-size: 1.5rem;
+    
+    }
+    .navbar.active ul{
+        margin-top: 2rem;
+        visibility: visible;
+        height: 100vh;
+        overflow-y: auto;
+    }
+    
+    
+    
+    .contanier_down{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 6rem;
+        
+    }
+    .img_down{
+        grid-column-start: 1;
+        grid-row-start: 2;
+
+    }
+    .texto_download{
+        width: 100%;
+        align-items: center;
+        gap: 2.3rem;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 690px){
+    .fotos_apresentacao{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        gap: 3rem;
+        column-gap: 0;
+    }
+    .fotos_apresentacao :last-child{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        
+    }
+    .fotos_app{
+        grid-template-columns:1fr 1fr;
+        column-gap: 0.1rem;
+        row-gap: 3rem;
+        
+    }
+}
+
+@media(max-width:529px){
+    .img_down{
+        text-align: center;
+    }
+    .img_down img{
+        max-width: 70%;  
+    }
+    .img_equipe{
+        text-align: center;
+    }
+    .img_equipe img{
+        max-width: 70%;
+        text-align: center;
+    }
+}
+
+@media(max-width: 465px){
+    .fotos_apresentacao{
+        display: flex;
+        flex-direction: column;
+    }
+    .fotos_apresentacao img{
+        object-fit: cover;
+    }
+    .fotos_app{
+        grid-template-columns: 1fr;
+    }
+    .img_cabecas_de_nos_tdos img {
+        min-width: 50%;
+        max-width: 80%;
+    }
 }
