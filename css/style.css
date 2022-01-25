@@ -438,7 +438,7 @@ body{
         grid-template-columns: 1fr;
     }
     .img_cabecas_de_nos_tdos img {
-        min-width: 50%;
+        min-width: 70%;
         max-width: 80%;
     }
 }
