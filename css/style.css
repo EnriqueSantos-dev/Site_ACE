@@ -298,10 +298,12 @@ body{
 }
 
 #button_incial{
+    position: fixed;
     background: #d748ff;
     width: 150px;
     height: 150px;
     margin-bottom: 50px;
+    position: fixed;
     outline: none;
     margin-bottom: 250px;
 }
@@ -352,9 +354,7 @@ body{
 }
 /* media */
 
-@media(min-width:1363px){
 
-}
 @media  (max-width: 970px){
     
     #logo_principal{
