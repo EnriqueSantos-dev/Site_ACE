@@ -116,11 +116,10 @@ body{
     text-align: justify;
 }
 .fotos_apresentacao {
+    text-align: center;
     max-width: 840px;
     display: flex;
-    gap: 1rem;
-    justify-content: flex-end;
-    
+    gap: 1.1rem;
 
 }
 
@@ -259,12 +258,7 @@ body{
     gap: 1.1rem;
     
 }
-/*
-.img_cabecas_de_nos_tdos{
-    display: grid;
-    gap: 1rem;
-}
-*/
+
 
 .foto_junto_com_email{
     display: flex;
@@ -274,7 +268,7 @@ body{
 }
 
 .foto_junto_com_email img{
-    object-fit: fill;
+    transition: 1s;
 }
 
 .nomes_e_email{
@@ -336,7 +330,12 @@ body{
     opacity: 1;
     transform: translate3d(0, 0, 0);
 }
-
+.subtitile_fotos_apresentacao{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1.2rem;
+    justify-items: center;
+}
 .subtitile_fotos_apresentacao img{
     width: 200px;
     height: 360px;
@@ -354,9 +353,7 @@ body{
 /* media */
 
 @media(min-width:1363px){
-    .subtitile_fotos_apresentacao img{
-        
-    }
+
 }
 @media  (max-width: 970px){
     
@@ -378,7 +375,10 @@ body{
     }
 }
 
-@media (max-width: 720px){
+@media (max-width: 780px){
+    .fotos_app{
+        grid-template-columns: repeat(2,1fr);
+    }
     .fotos_app img{
         width: 200px;
         height: 360px;
@@ -499,7 +499,7 @@ body{
     }
 }
 
-@media (max-width: 690px){
+@media (max-width: 720px){
     .fotos_apresentacao{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -521,7 +521,7 @@ body{
     }
 }
 
-@media(max-width:529px){
+@media(max-width:600px){
     .img_equipe{
         text-align: center;
     }
@@ -534,7 +534,7 @@ body{
     }
 }
 
-@media(max-width: 465px){
+@media(max-width: 565px){
     .subtitile_fotos_apresentacao p{
         display: block;
         
@@ -542,6 +542,7 @@ body{
     .fotos_apresentacao{
         display: flex;
         flex-direction: column;
+        gap: 3rem;
     }
     .fotos_apresentacao img{
         object-fit: cover;
