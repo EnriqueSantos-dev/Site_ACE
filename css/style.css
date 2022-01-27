@@ -308,7 +308,7 @@ body{
 }
 #quadrado{
     outline: none;
-    margin-top: -50px;
+    margin-top: -150px;
     display: flex;
     justify-content: center;
     background: #8a2be2;
