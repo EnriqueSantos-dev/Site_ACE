@@ -63,9 +63,6 @@ body{
     align-items: center;
     justify-items: center;
 }
-#logo_media_query{
-    display: none;
-}
 .navbar ul{
     display: flex;
     gap:1rem;
@@ -127,12 +124,6 @@ body{
 
 }
 
-.fotos_apresentacao img{
-    max-width: 280px;
-    max-height: 280px;
-    border: 2px solid blueviolet;
-    border-radius: 15px;
-}
 
 .titulos{
     color: blueviolet;
@@ -153,21 +144,28 @@ body{
 #app{
     margin-top: 10rem;
 }
+.contanier_app{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
 
+}
 .fotos_app img{
-    max-width: 320px;
-    max-height: 320px;
+    max-width: 280px;
+    max-height: 520px;
     border: 2px solid blueviolet;
     border-radius: 15px;
-   
-
+    width: 100%;
+    height: 100%;
 }
 
 .fotos_app {
     margin-top: 6rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
+    width: 80%;
+    grid-template-columns:repeat(3, 1fr);
+    row-gap: 2rem;
+    column-gap: 1.4rem;
     justify-items: center;
 
 }
@@ -223,13 +221,15 @@ body{
 }
 
 .texto_download a {
-    color: whitesmoke;
-    border: 2px solid blueviolet;
-    font-size: 1rem;
+    color: black;
+    font-size: 1.2rem;
+    font-style: bold;
+    font-weight: 500;
     padding: 1rem;
     width: 40%;
-    border-radius: 5px;
+    border-radius: 6px;
     text-align: center;
+    background-color: #22c441;
     
 }
 
@@ -274,7 +274,7 @@ body{
 }
 
 .foto_junto_com_email img{
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .nomes_e_email{
@@ -299,17 +299,16 @@ body{
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-bottom: 10px;
+    
 }
 
 #button_incial{
-    position: fixed;
     background: #d748ff;
     width: 150px;
     height: 150px;
-    margin-bottom: 40px;
     position: fixed;
     outline: none;
-    margin-bottom: 250px;
 }
 #quadrado{
     outline: none;
@@ -337,24 +336,44 @@ body{
     opacity: 1;
     transform: translate3d(0, 0, 0);
 }
+.subtitile_fotos_apresentacao{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+    row-gap: 1.2rem;
 
+    
+}
+.subtitile_fotos_apresentacao img{
+    width: 200px;
+    height: 360px;
+    max-width: 280px;
+    max-height: 520px;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+}
+
+.subtitile_fotos_apresentacao p{
+    display: none;
+    font-size: 1.1rem;
+    color: #B77AEF;
+}
 /* media */
-@media  (max-width: 863px){
+
+@media(min-width:1363px){
+    .subtitile_fotos_apresentacao img{
+        
+    }
+}
+@media  (max-width: 923px){
     
     #logo_principal{
-        display: none;
-    }
-    #logo_media_query{
-        cursor: pointer;
-        display: block;
-        width: 3.5rem;
+        width: 120%;
     }
 
     .contanier_main{
         display: grid;
-    }
-    .fotos_apresentacao{
-        justify-content: space-evenly;
     }
 
     .contanier_equipe{
@@ -368,6 +387,10 @@ body{
 }
 
 @media (max-width: 720px){
+    .fotos_app img{
+        width: 200px;
+        height: 360px;
+    }
     #hamburguer{
         width: 30px;
         border-top: 2px solid;
@@ -520,6 +543,10 @@ body{
 }
 
 @media(max-width: 465px){
+    .subtitile_fotos_apresentacao p{
+        display: block;
+        
+    }
     .fotos_apresentacao{
         display: flex;
         flex-direction: column;
